@@ -16,21 +16,21 @@
 
     <title>Frontend Mentor | Contact form</title>
 
-    <script>
-      src = "index.js";
-    </script>
+    <script src="index.js"></script>
   </head>
   <body>
     <div class="container">
       <h2>Contact Us</h2>
       <form class="contact-form">
-        <div class="form-grp">
-          <label for="firstname"> First Name *</label>
-          <input type="=text" id="firstname" name="firstname" required />
-        </div>
-        <div class="form-grp">
-          <label for="lastname"> Last Name *</label>
-          <input type="text" id="lastname" name="lastname" required />
+        <div class="Names-Container">
+          <div class="form-grp">
+            <label for="firstname"> First Name *</label>
+            <input type="text" id="firstname" name="firstname" required />
+          </div>
+          <div class="form-grp">
+            <label for="lastname"> Last Name *</label>
+            <input type="text" id="lastname" name="lastname" required />
+          </div>
         </div>
         <div class="form-grp">
           <label for="emailaddress"> Email Address *</label>
@@ -39,19 +39,21 @@
         <div class="form-grp">
           <label> Query Type *</label>
           <div class="radio">
-            <label>
+            <label class="radio-option">
               <input
                 type="radio"
-                name="generalenquiry"
+                id="radio1"
+                name="queryType"
                 value="general"
                 required
               />
               General Enquiry
             </label>
-            <label>
+            <label class="radio-option">
               <input
                 type="radio"
-                name="supportrequest"
+                id="radio2"
+                name="queryType"
                 value="support"
                 required
               />

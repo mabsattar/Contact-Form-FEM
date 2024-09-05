@@ -1,4 +1,120 @@
-.container {
-  display: contents;
+:root {
+  --primary-color: #007f3b; /* Green button color */
+  --primary-color-dark: #005f2b; /* Darker green on hover */
+  --background-color: #e9f5ef; /* Light green background */
+  --container-background: #fff;
+  --text-color: #333;
+  --border-color: #ccc;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background-color: var(--container-background);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  max-width: 500px;
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.form-grp {
+  margin-bottom: 20px;
+  flex: 1px;
+}
+
+.Names-Container {
+  display: flex;
+  gap: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.radio {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff; /* Optional: add a background color */
+  width: 100%; /* Ensures both radio buttons have equal width */
+}
+
+#radio1 {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.submitbtn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  text-transform: uppercase;
 }
