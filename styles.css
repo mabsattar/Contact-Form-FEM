@@ -1,7 +1,7 @@
 :root {
   --primary-color: #007f3b; /* Green button color */
   --primary-color-dark: #005f2b; /* Darker green on hover */
-  --background-color: #e9f5ef; /* Light green background */
+  --background-color: #e0f1e7; /* Light green background */
   --container-background: #fff;
   --text-color: #333;
   --border-color: #ccc;
@@ -52,7 +52,7 @@ h2 {
 label {
   display: block;
   margin-bottom: 6px;
-  font-weight: bold;
+  font-weight: normal;
   color: var(--text-color);
 }
 
@@ -77,23 +77,14 @@ textarea {
 }
 
 .radio-option {
-  display: flex;
-  align-items: center;
+  display: inline-block;
   padding: 6px 10px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: #fff; /* Optional: add a background color */
-  width: 100%; /* Ensures both radio buttons have equal width */
-}
-
-#radio1 {
-  display: flex;
-  align-items: center;
-  padding: 6px 10px;
+  margin-top: 5px;
   border: 1px solid var(--border-color);
   border-radius: 6px;
-  background-color: #fff;
+  cursor: pointer;
+  background-color: #fff; /* Optional: add a background color */
+  width: calc(50% - 5px); /* Ensures both radio buttons have equal width */
 }
 
 input[type="radio"],
@@ -107,7 +98,7 @@ input[type="checkbox"] {
 }
 
 .submitbtn {
-  background-color: var(--primary-color);
+  background-color: #0c7d69;
   color: #fff;
   padding: 12px;
   border: none;
@@ -115,6 +106,6 @@ input[type="checkbox"] {
   font-size: 16px;
   cursor: pointer;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
   text-transform: uppercase;
 }
