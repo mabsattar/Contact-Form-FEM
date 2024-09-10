@@ -113,3 +113,17 @@ input[type="checkbox"] {
 .required {
   color: #0c7d69;
 }
+
+.error-message {
+  color: red;
+  background-color: #fdd;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.success-message {
+  color: green;
+  background-color: #dfd;
+  padding: 10px;
+  margin: 10px 0;
+}
