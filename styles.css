@@ -1,18 +1,22 @@
 :root {
-  --primary-color: #007f3b; /* Green button color */
+  --primary-color: #0c7d69; /* Green button color */
   --primary-color-dark: #005f2b; /* Darker green on hover */
   --background-color: #e0f1e7; /* Light green background */
-  --container-background: #fff;
-  --text-color: #333;
+  --white-color: #fff;
+  --grey-darker: #333;
   --border-color: #ccc;
   --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* Typography */
+  --font-family: "Karla", sans-serif;
+  --font-size-label: 16px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: var(--font-family);
 }
 
 body {
@@ -20,12 +24,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: 20px;
+  color: var(--grey-darker);
 }
 
 .container {
-  background-color: var(--container-background);
+  background-color: var(--white-color);
   padding: 40px;
   border-radius: 12px;
   box-shadow: var(--box-shadow);
@@ -36,7 +41,7 @@ body {
 h2 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: var(--text-color);
+  color: var(--grey-darker);
 }
 
 .form-grp {
@@ -44,7 +49,7 @@ h2 {
   flex: 1px;
 }
 
-.Names-Container {
+.names-container {
   display: flex;
   gap: 10px;
 }
@@ -52,8 +57,9 @@ h2 {
 label {
   display: block;
   margin-bottom: 6px;
-  font-weight: normal;
-  color: var(--text-color);
+  font-weight: 400;
+  color: var(--grey-darker);
+  font-size: var(--font-size-label);
 }
 
 input[type="text"],
@@ -63,8 +69,8 @@ textarea {
   padding: 8px;
   border: 1px solid var(--border-color);
   border-radius: 6px;
-  font-size: 14px;
-  color: var(--text-color);
+  font-size: var(--font-size-label);
+  color: var(--grey-darker);
 }
 
 textarea {
@@ -83,8 +89,8 @@ textarea {
   border: 1px solid var(--border-color);
   border-radius: 6px;
   cursor: pointer;
-  background-color: #fff; /* Optional: add a background color */
-  width: calc(50% - 5px); /* Ensures both radio buttons have equal width */
+  background-color: var(--white-color);
+  width: calc(50% - 5px);
 }
 
 input[type="radio"],
@@ -98,32 +104,63 @@ input[type="checkbox"] {
 }
 
 .submitbtn {
-  background-color: #0c7d69;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--white-color);
   padding: 12px;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: var(--font-size-label);
   cursor: pointer;
   width: 100%;
   margin-top: 20px;
   text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.submitbtn:hover,
+.submitbtn:focus {
+  background-color: var(--primary-color-dark);
+  outline: none;
 }
 
 .required {
-  color: #0c7d69;
+  color: var(--primary-color);
 }
 
 .error-message {
-  color: red;
-  background-color: #fdd;
+  color: hsl(0, 66%, 54%);
+  background-color: hsl(0, 100%, 95%);
   padding: 10px;
   margin: 10px 0;
 }
 
 .success-message {
-  color: green;
+  color: var(--primary-color);
   background-color: #dfd;
   padding: 10px;
   margin: 10px 0;
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 20px;
+  }
+
+  .radio {
+    flex-direction: column;
+  }
+
+  .submitbtn {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .radio-option {
+    width: auto;
+  }
 }
